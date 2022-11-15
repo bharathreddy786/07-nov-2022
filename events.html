@@ -1,0 +1,91 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<button onclick="demo()">submit</button>
+	<script type="text/javascript">
+		function demo(){
+			alert("danger")
+		}
+	</script>
+
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		function save() {
+		var s=document.getElementById("event").innerHTML;
+		console.log(s)
+		var b=document.getElementById("India").innerHTML;
+		console.log(b)
+		var user=document.getElementById("user").value;
+		console.log(user)
+		}
+	</script>
+</head>
+<body>
+	<input id="user"type="text"placeholder="enter name" />
+	<h1 id="event">Events in javascript</h1>
+	<p id="India">i love India</p>
+	<button onclick="save()">submit</button>	
+</body>
+</html> --> 
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		function save() {
+		/*var s=document.getElementById("event").innerHTML;
+		console.log(s)
+		var b=document.getElementById("India").innerHTML;
+		console.log(b)
+		var user=document.getElementById("user").value;
+		console.log(user)*/
+
+		var group=document.getElementsByClassName("group")
+
+		var list=document.getElementsByTagName("li")
+				console.log(list)
+         for(var i=0;i<list.length;i++){
+         	console.log(list[i].innerHTML)
+         }
+
+		}
+	</script>
+</head>
+<body>
+	<input id ="user"type="text"placeholder="enter name" />
+	<h1 id="group">Events in javascript</h1>
+	<p class="group">i love India</p>
+	<h3 class="group" >This is bharath reddy</h3>
+	<p class="group">adhi ic fruit</p>	
+	<ul>
+		<li>one</li>
+		<li>two</li>
+		<li>tree</li>
+		<li>four</li>
+		<li>five</li>
+		<li>six</li>
+		<li>seven</li>
+		<li>eight</li>
+		<li>nine</li>
+		<li>ten</li>
+		<li>eleven</li>
+		<li>twelve</li>
+	</ul>
+	<button onclick="save()">submit</button>
+</body>
+</html> 
