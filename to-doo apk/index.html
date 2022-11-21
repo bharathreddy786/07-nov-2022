@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		body{
+			background-image:  url("img1.jpg" );
+			background-repeat:no-repeat ;
+			position: fixed;
+	        width:100%;
+	        text-align: center;
+	        background-size: cover;
+	        margin-top: 18.5%;
+		}
+		.listtype{
+			list-style: none;
+		}
+		#button{
+			background-color: pink;
+			padding:1%;
+			font-size: 25px;
+			border-radius: 20px;
+			width: 10%;
+		}
+		#button:hover{
+			color: red;
+			background-color: green;
+		}
+		#text{
+			background-color: pink;
+			padding:1%;
+			font-size: 25px;
+			width: 20%;
+			border-radius: 10px;
+		}
+		.message{
+			background-color: red;
+		}
+		#text::placeholder{
+			text-align: center;
+		}
+	
+  </style>
+	<script src="https://kit.fontawesome.com/307a1a4841.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<input id="text" placeholder="enter todo"/>
+	<ul>
+		
+	</ul>
+	<button id="button" onclick="submit()">submit</button>
+
+	<script type="text/javascript">
+				
+			
+		function submit(){
+			let text=document.getElementById("text").value,todolist=[]
+			if(text===""){
+				alert(" enter a todo value")
+			}
+			todolist.push(text)
+			console.log(todolist)
+			add(text)
+		  document.getElementById("text").value=""
+		}
+		function add(newValue){
+			var d= new Date()
+			let ul=document.querySelector("ul")
+			console.log(ul)
+			let li=document.createElement("li");
+			li.innerHTML=`
+			<span class="message">${newValue} ${d.getHours()} ${d.getMinutes()} 
+			${d.getSeconds()}</span>
+			<i class="fa-solid fa-square-xmark"></i>`
+            li.classList.add("listtype")
+			ul.appendChild(li)
+			
+		}
+	</script>
+
+</body>
+</html>
